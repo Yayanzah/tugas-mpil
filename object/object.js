@@ -8,5 +8,5 @@ let student = {
 };
 
 console.log(student.sayHello()); // Halo, nama saya Yayan
-console.log("Umur saya adalah " + student.umur + " tahun."); // Umur saya adalah 19 tahun.
+console.log("Umur saya adalah " + student.umur + " tahun."); // Umur saya adalah 17 tahun.
 console.log("Hobby saya adalah " + student.hobby + "."); // Hobby saya adalah mancing.
