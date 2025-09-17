@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Belajar DOM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #kontainer {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+      }
+      p {
+        background: #f0f0f0;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Belajar JavaScript DOM</h1>
+
+    <button id="tambah">Tambah Paragraf</button>
+    <button id="hapus">Hapus Paragraf Terakhir</button>
+
+    <div id="kontainer">
+      <p>Paragraf awal</p>
+    </div>
+
+    <script>
+      const kontainer = document.getElementById("kontainer");
+      const btnTambah = document.getElementById("tambah");
+      const btnHapus = document.getElementById("hapus");
+
+      // Event: Tambah paragraf
+      btnTambah.addEventListener("click", function () {
+        let pBaru = document.createElement("p");
+        pBaru.innerText = "Paragraf baru ditambahkan!";
+        kontainer.appendChild(pBaru);
+      });
+
+      // Event: Hapus paragraf terakhir
+      btnHapus.addEventListener("click", function () {
+        let semuaP = kontainer.getElementsByTagName("p");
+        if (semuaP.length > 0) {
+          kontainer.removeChild(semuaP[semuaP.length - 1]);
+        }
+      });
+    </script>
+  </body>
+</html>
